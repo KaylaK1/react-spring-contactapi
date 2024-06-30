@@ -1,4 +1,4 @@
-package service;
+package com.springrefresh.contactapi.service;
 
 import com.springrefresh.contactapi.domain.Contact;
 import com.springrefresh.contactapi.repo.ContactRepo;
