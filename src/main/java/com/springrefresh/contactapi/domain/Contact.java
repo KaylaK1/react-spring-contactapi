@@ -19,7 +19,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonInclude(NON_DEFAULT)
+//@JsonInclude(NON_DEFAULT)
 @Table(name = "contacts")
 public class Contact {
     @Id
