@@ -47,8 +47,14 @@ public class ContactResource {
         return ResponseEntity.ok().body(contactService.uploadPhoto(id, file));
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Contact> deleteContact(@PathVariable(value = "id") String id) {
+        return ResponseEntity.ok().body(contactService.deleteContact(id));
+    }
     @GetMapping(path ="/image/{filename}", produces = { IMAGE_PNG_VALUE, IMAGE_JPEG_VALUE })
     public byte[] getPhoto(@PathVariable("filename") String filename) throws IOException {
         return Files.readAllBytes(Paths.get(PHOTO_DIRECTORY + filename));
     }
+
+
 }

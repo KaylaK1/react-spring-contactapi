@@ -43,7 +43,7 @@ public class ContactService {
     }
 
     public Contact deleteContact(Contact contact) {
-        //return contactRepo.delete(contact);
+        contactRepo.delete(contact);
         return contact;
     }
 
