@@ -42,8 +42,9 @@ public class ContactService {
         return contactRepo.save(contact);
     }
 
-    public Contact deleteContact(Contact contact) {
-        contactRepo.delete(contact);
+    public Contact deleteContact(String id) {
+        Contact contact = contactRepo.findById(id).orElseThrow(() -> new RuntimeException("Contact not found"));
+        contactRepo.deleteById(id);
         return contact;
     }
 
